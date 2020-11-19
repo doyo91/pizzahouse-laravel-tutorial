@@ -17,10 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function () {
+Route::get('/pizzastut', function () {
     // return 'pizzas!';
     // return ['name' => 'veg pizzas', 'base' => 'classic'];
     // get data from db
-    return view('pizzas', ['type' => 'hawaiian']);
+    // return view('pizzas', ['type' => 'hawaiian','base' => 'cheesy crust']);
+    // $pizza = ['type' => 'hawaiian','base' => 'garlic crust', 'price' => 10];
+    $pizzas = [
+        ['type' => 'hawaiian','base' => 'cheesy crust'],
+        ['type' => 'volcano','base' => 'garlic crust'],
+        ['type' => 'hawaiian','base' => 'thin & crispy']
+    ];
+
+    return view('pizzasejem', ['pizzas' => $pizzas]);
 
 });

@@ -61,17 +61,21 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            footer {
+                background-color: #eee;
+                padding: 20px;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-           
-            <div class="content">
-                <div class="title m-b-md">
-                    Pizza List
-                </div>
-                <p>{{ $type }}</p>                
-            </div>
-        </div>
+        
+        @yield('content')
+
+        <footer>
+            Copyright 2020 &copy;Pizza House
+        </footer>
+
     </body>
 </html>
