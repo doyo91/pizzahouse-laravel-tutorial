@@ -17,6 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/pizzas', function () {
+    $pizzas = [
+        ['type' => 'hawaiian','base' => 'cheesy crust'],
+        ['type' => 'volcano','base' => 'garlic crust'],
+        ['type' => 'hawaiian','base' => 'thin & crispy']
+    ];
+
+    $name = request('name');
+    $age = request('age');
+
+    return view('pizzas', [
+        'pizzas' => $pizzas,
+        'name' => $name,
+        'age' => $age,
+        ]);
+
+});
+
+
+// Examples
 Route::get('/pizzastut', function () {
     // return 'pizzas!';
     // return ['name' => 'veg pizzas', 'base' => 'classic'];

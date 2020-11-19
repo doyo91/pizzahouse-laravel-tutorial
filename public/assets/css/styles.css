@@ -38,6 +38,7 @@ body {
     border-bottom: 2px solid;
     padding: 12px 0;
     color: #5e2195;
+    font-weight: 300;
 }
 
 .links > a {
