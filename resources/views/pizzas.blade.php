@@ -7,7 +7,7 @@
         <div class="title m-b-md">
             Pizza List
         </div>
-        {{ $name }} - age: {{ $age }}
+        
         @foreach($pizzas as $pizza)
             <div>
                 {{ $loop->index }}
